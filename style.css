@@ -1,0 +1,229 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  background-image: url("assets/backgrounds/tsbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #222;
+  font-family: serif;
+  animation: fadeIn 0.8s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(253, 246, 236, 0.6); /* warm cream wash */
+  z-index: -1;
+}
+
+
+/* HEADER COLLAGE */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 310px; /* controls the mat height */
+  background-image: url("assets/taylor-collage.jpg");
+  background-position: center;
+  margin-bottom: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* soft wash so text sits nicely */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(145, 123, 96, 0.35); /* cream tint */
+  backdrop-filter: blur(0.5px);
+}
+
+/* heading ON the collage */
+.hero h1 {
+  position: relative;
+  font-size: 3rem;
+  color: #a9616b;
+  letter-spacing: 2px;
+  z-index: 2;
+  padding: 20px 50px;
+  border-radius: 0px;
+  box-shadow: 0 10px 30px rgba(161, 60, 60, 0.15);
+}
+
+
+/* ALBUM GRID */
+.albums {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  padding: 70px;
+}
+
+/* ALBUM CARD */
+.album img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.album h2 {
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* FONT STYLES PER ERA */
+
+.debut-font {
+  font-family: 'Libre Baskerville', serif;
+  color: #4f8a8b;
+}
+
+.fearless-font {
+  font-family: 'Great Vibes', cursive;
+  color: #c9a24d;
+}
+
+.speaknow-font {
+  font-family: 'Playfair Display', serif;
+  color: #6a3fa0;
+}
+
+.red-font {
+  font-family: 'EB Garamond', serif;
+  color: #8b0000;
+}
+
+.pop-font { /* 1989 */
+  font-family: 'Montserrat', sans-serif;
+  color: #7bb7d9;
+}
+
+.rep-font {
+  font-family: 'Oswald', sans-serif;
+  color: #111;
+  letter-spacing: 2px;
+}
+
+.lover-font {
+  font-family: 'Pacifico', cursive;
+  color: #e56aa6;
+}
+
+.folk-font { /* folklore */
+  font-family: 'IM Fell English', serif;
+  color: #555;
+}
+
+.evermore-font {
+  font-family: 'Cormorant Garamond', serif;
+  color: #7a4a2e;
+}
+
+.midnights-font {
+  font-family: 'Montserrat', sans-serif;
+  color: #1b2a4e;
+}
+
+.ttpd-font {
+  font-family: 'Libre Baskerville', serif;
+  color: #2a2a2a;
+}
+
+.showgirl-font {
+  font-family: 'Playfair Display', serif;
+  color: #b87333;
+}
+
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+/* Soft era glow on hover */
+.album:hover img {
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+}
+
+.album-page {
+  padding: 60px;
+  text-align: center;
+}
+
+.song-list {
+  list-style: none;
+  margin: 40px 0;
+}
+
+.song-list li {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.playlist-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #e56aa6;
+  color: white;
+  text-decoration: none;
+} 
+
+@media (max-width: 900px) {
+  .albums {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .sticker {
+    width: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .albums {
+    grid-template-columns: 1fr;
+  }
+} 
+
+/* Reduce space between search bar and albums */
+.search-container {
+  margin: 10px 0 15px 70px; /* top 10px, bottom 15px */
+  text-align: left;
+}
+
+/* Cute search bar styling */
+#song-search {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 25px;       /* rounded pill shape */
+  border: 2px solid #f7a1c4; /* soft pink border */
+  outline: none;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow */
+  transition: all 0.3s ease;
+  background-color: #fff0f8;  /* soft pinkish background */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* playful font */
+}
+
+/* Hover/focus effects */
+#song-search:focus {
+  border-color: #f48fb1; /* darker pink on focus */
+  box-shadow: 0 0 10px rgba(244, 143, 177, 0.5);
+  background-color: #ffe6f0;
+}
