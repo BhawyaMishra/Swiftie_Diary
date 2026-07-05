@@ -3,18 +3,18 @@ const resultsList = document.getElementById("searchResults");
 
 // Array of songs/albums with links to their HTML pages
 const songs = [
-  { name: "Lover", link: "albums/lover.html" },
-  { name: "1989", link: "albums/1989.html" },
-  { name: "Fearless", link: "albums/fearless.html" },
-  { name: "Reputation", link: "albums/reputation.html" },
-  { name: "Red", link: "albums/red.html" },
-  { name: "Speak Now", link: "albums/speaknow.html" },
-  { name: "Debut", link: "albums/debut.html" },
-  { name: "TTPD", link: "albums/ttpd.html" },
-  { name: "Showgirl", link: "albums/lifepfashowgirl.html" },
-  { name: "Midhnights", link: "albums/midnights.html" },
-  { name: "Evermore", link: "albums/evermore.html" },
-  { name: "Folklore", link: "albums/folklore.html" },
+  { name: "Lover", link: "lover.html" },
+  { name: "1989", link: "1989.html" },
+  { name: "Fearless", link: "fearless.html" },
+  { name: "Reputation", link: "reputation.html" },
+  { name: "Red", link: "red.html" },
+  { name: "Speak Now", link: "speaknow.html" },
+  { name: "Debut", link: "debut.html" },
+  { name: "TTPD", link: "ttpd.html" },
+  { name: "Showgirl", link: "lifepfashowgirl.html" },
+  { name: "Midhnights", link: "midnights.html" },
+  { name: "Evermore", link: "evermore.html" },
+  { name: "Folklore", link: "folklore.html" },
   // Add all other songs/albums here
 ];
 
